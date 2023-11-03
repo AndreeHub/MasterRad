@@ -411,6 +411,4 @@
  ;;   - :triple-lowbar (default)
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
- :file/name-format :triple-lowbar
- :editor/logical-outdenting? true
- :editor/preferred-pasting-file? true}
+ :file/name-format :triple-lowbar}
