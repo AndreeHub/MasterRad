@@ -15,3 +15,45 @@ file-path:: ../assets/Modeling_structures_by_springs_1697747236834_0.pdf
   id:: 653ec537-ebcf-4af0-acbe-e0d896833bd5
   hl-type:: area
   hl-stamp:: 1698612534588
+- [:span]
+  ls-type:: annotation
+  hl-page:: 2
+  hl-color:: green
+  id:: 65468d41-e1e6-4687-acc1-4f2b3cb3cec5
+  hl-type:: area
+  hl-stamp:: 1699122496483
+- [:span]
+  ls-type:: annotation
+  hl-page:: 2
+  hl-color:: blue
+  id:: 65468ecc-07b2-4b4e-9358-bb677064c1c5
+  hl-type:: area
+  hl-stamp:: 1699122891129
+- [:span]
+  ls-type:: annotation
+  hl-page:: 2
+  hl-color:: purple
+  id:: 65469004-876e-49ae-a12d-95fe64d301e6
+  hl-type:: area
+  hl-stamp:: 1699123203444
+- [:span]
+  ls-type:: annotation
+  hl-page:: 3
+  hl-color:: green
+  id:: 654692e4-84b9-4b29-a588-266a56c05829
+  hl-type:: area
+  hl-stamp:: 1699123939697
+- [:span]
+  ls-type:: annotation
+  hl-page:: 3
+  hl-color:: purple
+  id:: 654693d1-f0f1-4edd-98c0-3cf6ad0d6000
+  hl-type:: area
+  hl-stamp:: 1699124176475
+- [:span]
+  ls-type:: annotation
+  hl-page:: 3
+  hl-color:: blue
+  id:: 654696f8-32fe-4920-9854-fe7a4939b167
+  hl-type:: area
+  hl-stamp:: 1699124983464

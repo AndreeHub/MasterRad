@@ -1,4 +1,5 @@
 - [[Osnove]]
+  collapsed:: true
 	- Tekst uvodi metodologiju za analizu statičkih struktura koristeći osnovne fizike i principe strukturalne analize. Ova metoda modeluje članove strukture kao opruge, sastavljene na način koji oponaša stvarni strukturalni sistem. Tako se može izračunati ukupna efektivna krutost strukture i odrediti njena deformacija pod primenjenim opterećenjima. 
 	  id:: 653eb897-6333-4984-a225-900f7c57ba81
 	- Iako je ovaj pristup istaknut u nekim naprednim tekstovima o strukturalnoj dinamici, nije često korišćen u osnovnim kursima strukturalne analize ili dizajna.. Dokument sugeriše da korišćenje ovog predstavljanja oprugom može ponuditi brzu i efikasnu analizu razmjerno složenih građevinskih struktura, i može služiti kao sredstvo za proveru tradicionalnih inženjerskih proračuna.
@@ -31,3 +32,64 @@
 			- tako da je ekvivalentna krutost
 			- $$k_{eq}=\frac{E A}{L}$$
 		- Ovaj nosac mozemo posmatrati kao oprugu
+- [[Sistem opruga]]
+  collapsed:: true
+	- Od ovih osnovinh elemnata mozemo da modelujemo kompleksne strukture  preko sistema opruga. Vezivanjem opruga paralelno i serijski mozemo svesti pomeranje zgrade na racuanje ekviaveltne krutosti sitema opruga.
+		- [[paralelno vezivanje opruga]]
+			- ((65468d41-e1e6-4687-acc1-4f2b3cb3cec5)) [[krutost paralelnih opruga]]
+			- kada se sklop opruga optereti silom, i sve imaju isto pomeranje onda se kaze da su one vezano paralelno kao na slici.
+			- ekvivalena krutost sitema je
+				- [[Formule MR]]
+					- [[krutost paralelnih opruga]]
+						- $$k_{eq}=k_1+k_2+...+k_n$$
+			- [[serijsko vezivanje opruga]]
+				- ((65468ecc-07b2-4b4e-9358-bb677064c1c5)) [[krutost serijskih opruga]]
+				- $$ k_{eq}=\frac{1}{\frac{1}{k_1}+\frac{1}{k_2}+...+\frac{1}{k_n}}=\frac{k_1 \cdot k_2 \cdot \cdot \cdot k_n}{k_1+k_2+...+k_n}$$
+			- Generalni sistem opruga
+				- sve linearne strukture se mogu predstaviti kao model sistema opruga koje su vezane paralelno i serijski.
+				- primer :
+					- ((65469004-876e-49ae-a12d-95fe64d301e6))
+					- $$k_{eq}=\frac{k_1 \cdot (k_2+ k_3)}{k_1+k_2+k_3}$$
+					- deflekcija se moze izracunati preko hukovog zakona
+					- $$ \Delta = \frac{F}{k_{eq}=\frac{F (k_1+k_2+k_3)}{k_1 \cdot (k_2+k_3)}}$$
+					-
+- [[Strukturalni clanovi i strukturalni sistem modelovan preko opruga]]
+  collapsed:: true
+	- da bi se analiza pojednostavila neki strukturalni clanovi se modeluju kao savrseno rigidn (opruga sa beskonacnom krutostu), dok se krutost ostalih clanova mora sracunati. ANaliticar mora dobro da pregleda prilozene crteze i da pretovir veze u odgovarajuci model opruge i da sastavi sistem opruga.
+	- Rigidni clanovi.
+		- ako je clan mnogo krut, moze se pretpostaviti da je savrseno krut bez velikog uticaja na rezultat. Nap rimer pod, krov, betonska ploca.
+	- fleksibilni clanovi.
+		- Stubovi se mogu modelovati kao opruge
+			- stub koji je kruto povezan za krutim clanovima, nema rotaciju na bazi i vrhu i ima ekvialentnu krutost
+			- $$ k_{eq}=\frac{12EI}{L^3}$$
+			- ((654692e4-84b9-4b29-a588-266a56c05829))
+			- I moment inercije, L je duzina kolone. Ova formula se koristi kada se vrh stuba pomera u odnosu na bazu.
+			- ako se baza i vrh stuba mogu kretati, ovo se moze modelovati kao stub sa cilindricnim zglobom
+			- ((654693d1-f0f1-4edd-98c0-3cf6ad0d6000))
+			- ekvivaletna kutost
+			- $$k_{eq}=\frac{3EI}{L^3}$$
+		- u realnosti veze nikad nisu savrseno krute ili se mogu rotirati, ali se kretanje strkturalni clanova moze aproksimirati koriscenjem ovih veza.
+			- ako je veza i gore i dole cilindricni zglob, ekeftivna krutost je nula i ta kolona nije sposbna da podnosi poprecna opterecenja.
+- [[Primer]]
+  collapsed:: true
+	- posmatramo primer zgrade
+	- ((654696f8-32fe-4920-9854-fe7a4939b167))
+	- krutost prvog sprata je :
+		- $$k_1 = 2 \times \frac{12(2EI)}{\left(\sqrt[3]{4}\ell\right)^3} + \frac{3(2EI)}{\left(\sqrt[3]{4}\ell\right)^3} = \frac{48 EI}{4 \ell^3} + \frac{18 EI}{4 \ell^3} = \frac{66 EI}{4 \ell^3} \tag{11}$$
+		- $$k_2 = 0 + 2 \times \frac{3(1.5EI)}{\ell^3} + \frac{12(1.5EI)}{\ell^3}  =\frac{9EI}{\ell^3}+\frac{18EI}{\ell^3} = \frac{27EI}{\ell^3} \tag{12} \\$$
+		- $$k_3 = 0 + \frac{3EI}{\ell^3} + \frac{12EI}{\ell^3}  = \frac{15EI}{\ell^3} \tag{13} \\$$
+		- $$k_{eq}=\frac{1}{\frac{1}{k_1}+\frac{1}{k_2}+\frac{1}{k_3}}=\frac{1}{\frac{4\ell^3}{66EI}+\frac{\ell^3}{27EI}+\frac{\ell^3}{15 EI}}=\frac{1}{\frac{4392\ell^3}{26 730EI}}=\frac{26730EI}{4392\ell^3}$$
+		- otklon hukovog zakona je dat sa
+		- $$\Delta=\frac{F}{k_{eq}}=\frac{4392F\ell^3}{26730EI}$$
+		- interna sila na svakoj koloni se moze izracunati proporciom individualnek rutoce relativno na globalnu krutocu sprata.
+		- primer slucaj opterecna na 3 spratu , racunamo pomeranje skroz leve kolone kao procenat krutosti ove kolone u odosu na totalnu za taj sprat uta sila
+			- $$F_{L1}=\frac{k_{L1}}{k_1}F$$
+			- gde je $$k_{L1}$$ krutost najlevije kolone
+			- i dobija se da je $$k_{L1}=\frac{12(2EI)}{\sqrt[3]{4}\ell^3}=\frac{24 EI}{4 \ell^3}$$
+			- tj $$F_{L1}=\frac{22}{66}F=\frac{12}{33}F$$
+- [[Zakljucak]]
+  collapsed:: true
+	- modelovanje linearnih struktura kao sistem opruga daje brz uvid ponasanja same strutkure. Ovo je dobra alternativa za proveru tradicinalnih metoda kalukalcija i moze se koristit da potvrdi proracun.
+- [[Python deo]]
+-
+-
