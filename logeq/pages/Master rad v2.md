@@ -1,5 +1,4 @@
 - [[Osnove]]
-  collapsed:: true
 	- Tekst uvodi metodologiju za analizu statičkih struktura koristeći osnovne fizike i principe strukturalne analize. Ova metoda modeluje članove strukture kao opruge, sastavljene na način koji oponaša stvarni strukturalni sistem. Tako se može izračunati ukupna efektivna krutost strukture i odrediti njena deformacija pod primenjenim opterećenjima. 
 	  id:: 653eb897-6333-4984-a225-900f7c57ba81
 	- Iako je ovaj pristup istaknut u nekim naprednim tekstovima o strukturalnoj dinamici, nije često korišćen u osnovnim kursima strukturalne analize ili dizajna.. Dokument sugeriše da korišćenje ovog predstavljanja oprugom može ponuditi brzu i efikasnu analizu razmjerno složenih građevinskih struktura, i može služiti kao sredstvo za proveru tradicionalnih inženjerskih proračuna.
@@ -42,17 +41,17 @@
 				- [[Formule MR]]
 					- [[krutost paralelnih opruga]]
 						- $$k_{eq}=k_1+k_2+...+k_n$$
-			- [[serijsko vezivanje opruga]]
-				- ((65468ecc-07b2-4b4e-9358-bb677064c1c5)) [[krutost serijskih opruga]]
-				- $$ k_{eq}=\frac{1}{\frac{1}{k_1}+\frac{1}{k_2}+...+\frac{1}{k_n}}=\frac{k_1 \cdot k_2 \cdot \cdot \cdot k_n}{k_1+k_2+...+k_n}$$
-			- Generalni sistem opruga
-				- sve linearne strukture se mogu predstaviti kao model sistema opruga koje su vezane paralelno i serijski.
-				- primer :
-					- ((65469004-876e-49ae-a12d-95fe64d301e6))
-					- $$k_{eq}=\frac{k_1 \cdot (k_2+ k_3)}{k_1+k_2+k_3}$$
-					- deflekcija se moze izracunati preko hukovog zakona
-					- $$ \Delta = \frac{F}{k_{eq}=\frac{F (k_1+k_2+k_3)}{k_1 \cdot (k_2+k_3)}}$$
-					-
+		- [[serijsko vezivanje opruga]]
+			- ((65468ecc-07b2-4b4e-9358-bb677064c1c5)) [[krutost serijskih opruga]]
+			- $$ k_{eq}=\frac{1}{\frac{1}{k_1}+\frac{1}{k_2}+...+\frac{1}{k_n}}=\frac{k_1 \cdot k_2 \cdot \cdot \cdot k_n}{k_1+k_2+...+k_n}$$
+		- Generalni sistem opruga
+			- sve linearne strukture se mogu predstaviti kao model sistema opruga koje su vezane paralelno i serijski.
+			- primer :
+				- ((65469004-876e-49ae-a12d-95fe64d301e6))
+				- $$k_{eq}=\frac{k_1 \cdot (k_2+ k_3)}{k_1+k_2+k_3}$$
+				- deflekcija se moze izracunati preko hukovog zakona
+				- $$ \Delta = \frac{F}{k_{eq}=\frac{F (k_1+k_2+k_3)}{k_1 \cdot (k_2+k_3)}}$$
+				-
 - [[Strukturalni clanovi i strukturalni sistem modelovan preko opruga]]
   collapsed:: true
 	- da bi se analiza pojednostavila neki strukturalni clanovi se modeluju kao savrseno rigidn (opruga sa beskonacnom krutostu), dok se krutost ostalih clanova mora sracunati. ANaliticar mora dobro da pregleda prilozene crteze i da pretovir veze u odgovarajuci model opruge i da sastavi sistem opruga.
