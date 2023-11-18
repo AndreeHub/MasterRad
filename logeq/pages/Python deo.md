@@ -1,0 +1,2 @@
+- [Kod.ipynb](../assets/Kod_1699201579494_0.ipynb)
+-
